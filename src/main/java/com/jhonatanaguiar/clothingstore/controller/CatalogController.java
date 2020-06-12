@@ -18,7 +18,7 @@ import com.jhonatanaguiar.clothingstore.business.enums.CategoryEnum;
 /**
  * Servlet implementation class CatalogController
  */
-@WebServlet("/catalog")
+@WebServlet("/catalogo")
 public class CatalogController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	

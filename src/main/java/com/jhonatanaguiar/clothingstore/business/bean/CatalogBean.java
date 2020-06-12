@@ -15,13 +15,13 @@ public class CatalogBean {
 	public CatalogBean() {
 		// Inicia a lista de roupas com algumas roupas
 		clothes = new ArrayList<>();
-		clothes.add(newClothe("Camiseta", CategoryEnum.MEN_CLOTHE, 49.9f, "a-definir.jpg"));
-		clothes.add(newClothe("Calça", CategoryEnum.MEN_CLOTHE, 80f, "a-definir.jpg"));
-		clothes.add(newClothe("a definir", CategoryEnum.WOMEN_CLOTHE, 15f, "a-definir.jpg"));
-		clothes.add(newClothe("a definir", CategoryEnum.WOMEN_CLOTHE, 120f, "a-definir.jpg"));
-		clothes.add(newClothe("a definir", CategoryEnum.WOMEN_CLOTHE, 70.99f, "a-definir.jpg"));
-		clothes.add(newClothe("a definir", CategoryEnum.TENNIS, 80f, "a-definir.jpg"));
-		clothes.add(newClothe("a definir", CategoryEnum.TENNIS, 45.99f, "a-definir.jpg"));
+		clothes.add(newClothe("Camiseta de time", CategoryEnum.MEN_CLOTHE, 179.99f, "camisa-barcelona-masculina-img.jpg"));
+		clothes.add(newClothe("Calça", CategoryEnum.MEN_CLOTHE, 49.9f, "calca-masculina-img.jpg"));
+		clothes.add(newClothe("Agasalho", CategoryEnum.WOMEN_CLOTHE, 249.9f, "agasalho-feminino-img.jpg"));
+		clothes.add(newClothe("Camiseta", CategoryEnum.WOMEN_CLOTHE, 119.9f, "camiseta-oxer-cord-ii-feminina-img.jpg"));
+		clothes.add(newClothe("Maiô", CategoryEnum.WOMEN_CLOTHE, 70.99f, "maio-para-natacao-img.jpg"));
+		clothes.add(newClothe("Tênis", CategoryEnum.TENNIS, 349.9f, "tenis-masculino-img.jpg"));
+		clothes.add(newClothe("Tênis", CategoryEnum.TENNIS, 249.9f, "tenis-nike-air-img.jpg"));
 	}
 
 	// Funcao auxiliar para criar novas roupas
