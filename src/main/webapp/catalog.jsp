@@ -60,7 +60,7 @@
 								</div>
 
 								<div class="btn-group">
-									<button class="btn btn-warning" type="reset">Reset</button>
+									<button class="btn btn-warning" type="reset">Limpar Seleção</button>
 									<button class="btn btn-primary">Filtrar</button>
 								</div>
 
