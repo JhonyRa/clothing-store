@@ -17,12 +17,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3>Tela de boas vindas</h3>
+					<h3>Bem Vindo</h3>
 				</div>
 			</div>
 			
 	           <div class="card h-100">
-	             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+	             <a href="#"><img class="card-img-top" src="assets/img/index/Design-a-Clothing-Store-Logo.jpg" alt=""></a>
 	           </div>
      	</div>
     </div>

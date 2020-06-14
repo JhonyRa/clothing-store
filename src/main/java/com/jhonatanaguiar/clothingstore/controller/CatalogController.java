@@ -77,7 +77,7 @@ public class CatalogController extends HttpServlet {
 			
 			HttpSession session = request.getSession();
 	
-			// Verifica se ja existe um cart e cria um, caso contratio
+			// Verifica se ja existe um cart e cria um, caso contrario
 			if (session.getAttribute("cart") == null) {
 				// Caso nao exista a lista de compras, cria uma
 				
@@ -88,7 +88,7 @@ public class CatalogController extends HttpServlet {
 			//Recupera a lista de compras
 			List<ClotheBean> cart = (List<ClotheBean>) session.getAttribute("cart");
 			
-			// Identifica o codigo da roupa que o usuario clicout
+			// Identifica o codigo da roupa que o usuario clicou
 			String codeString = request.getParameter("add");
 			Integer code = Integer.parseInt(codeString);
 			

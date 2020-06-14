@@ -15,14 +15,16 @@
 			<c:import url="/common/side-bar.jsp" />
 			
 			<div class="col-9">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<h3>Catálogo</h3>
-						</div>
+				
+				<div class="row">
+					<div class="col-12">
+						<h3>Catálogo</h3>
 					</div>
-
-					<div class="row">
+				</div>
+				
+				
+				<div class="row">
+					<section class="container row">
 						<div class="col-lg-4 col-md-6 mb-4">
 							<c:forEach items="${ clothes }" var="clothe">
 								<form method="post">
@@ -40,13 +42,12 @@
 									</div>
 									<div class="btn-group">
 										<button type="submit" name="add" value="${ clothe.code }" class="btn btn-primary">Adicionar</button>
-										<a class="btn btn-info" href="#">Detalhes</a>
 									</div>
 								</form>
 							</c:forEach>
 						</div>
 						
-						<div class="col-8 text-right">
+						<div class="col-3 text-right">
 							<h5>Filtros</h5>
 
 							<form method="get">
@@ -67,7 +68,7 @@
 							</form>
 
 						</div>
-					</div>
+					</section>
 				</div>
 			</div>
 		</div>

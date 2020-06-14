@@ -6,7 +6,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>clothingStore</h3>
+                <h3>holiShirts</h3>
                 <strong>CS</strong>
             </div>
 
