@@ -13,12 +13,12 @@ import javax.servlet.http.HttpSession;
 
 import com.jhonatanaguiar.clothingstore.business.bean.CatalogBean;
 import com.jhonatanaguiar.clothingstore.business.bean.ClotheBean;
-import com.jhonatanaguiar.clothingstore.business.enums.CategoryEnum;
+import com.jhonatanaguiar.clothingstore.model.Category;
 
 /**
  * Servlet implementation class CatalogController
  */
-@WebServlet("/catalogo")
+@WebServlet("/catalog")
 public class CatalogController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -41,14 +41,39 @@ public class CatalogController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// Recupera os valores do select do front
-		String[] categoryCodes = request.getParameterValues("categoria");
-
+		String[] categoryCodes = request.getParameterValues("category");
+		
+		//instanciando uma lista de categoria, onde a variavel category do tipo list recebe uma lista.
+		List<Category> category =  new ArrayList<>();
+		
+		Category menClothe = new Category();
+		menClothe.setName("Roupa Masculina");
+		menClothe.setCode(1);
+		
+		Category womenClothe = new Category();
+		womenClothe.setName("Roupa Feminina");
+		womenClothe.setCode(2);
+		
+		Category tennis = new Category();
+		tennis.setName("Tenis");
+		tennis.setCode(3);
+		
+		Category others = new Category();
+		others.setName("Outros");
+		others.setCode(3);
+		
+		category.add(menClothe);
+		category.add(womenClothe);
+		category.add(tennis);
+		category.add(others);
+		
+		
 		// Envia as roupas do catalogo para o front
-		request.setAttribute("roupas", catalogBean.getFilteredClothes(categoryCodes));
-		request.setAttribute("categorias", CategoryEnum.values());
+		request.setAttribute("clothes", catalogBean.getFilteredClothes(categoryCodes));
+		request.setAttribute("categories", category);
 		
 		// Usuario clicou em adicionar
-		if (request.getParameter("adicionar") != null) {
+		if (request.getParameter("add") != null) {
 			
 			HttpSession session = request.getSession();
 	
@@ -64,8 +89,8 @@ public class CatalogController extends HttpServlet {
 			List<ClotheBean> cart = (List<ClotheBean>) session.getAttribute("cart");
 			
 			// Identifica o codigo da roupa que o usuario clicout
-			String codigoString = request.getParameter("adicionar");
-			Integer code = Integer.parseInt(codigoString);
+			String codeString = request.getParameter("add");
+			Integer code = Integer.parseInt(codeString);
 			
 			// Percorre todas as roupas e procure aquela com codigo igual.
 			// Adiciona ao carrinho
@@ -79,7 +104,7 @@ public class CatalogController extends HttpServlet {
 		}
 
 		// Envia a pagina jsp na requisicao
-		request.getRequestDispatcher("/catalogo.jsp").forward(request, response);
+		request.getRequestDispatcher("/catalog.jsp").forward(request, response);
 	}
 
 	/**

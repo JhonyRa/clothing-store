@@ -2,13 +2,35 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>clothingStore</h3>
+                <strong>CS</strong>
+            </div>
 
-<div class="col-3">
-	<nav id="sidebar">
-		<ul class="list-unstyled">
-			<li><a class="btn btn-dark btn-block m-1" href=" <c:url value="/" /> ">Principal</a></li>
-			<li><a class="btn btn-dark btn-block m-1" href=" <c:url value="/catalogo" /> ">Catálogo</a></li>
-			<li><a class="btn btn-dark btn-block m-1" href=" <c:url value="/cart" /> ">Carrinho</a></li>
-		</ul>
-	</nav>
-</div>
+            <ul class="list-unstyled components">
+                <li class="active">
+                   
+                <li>
+                    <a href="<c:url value="/" />">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="<c:url value="/catalog" />">
+                        <i class="fas fa-store"></i>
+                        Catálogo
+                    </a>
+                </li>
+                <li>
+                    <a href="<c:url value="/cart"/>">
+                        <i class="fas fa-shopping-cart"></i>
+                        Carrinho
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
